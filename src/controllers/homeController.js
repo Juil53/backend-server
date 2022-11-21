@@ -6,7 +6,7 @@ const getUser = async (req, res) => {
         const users = await CRUD.getAllUser()
         res.status(200).json({ data: users })
     } catch (error) {
-        res.status(500).json({ message: 'Something went wrong!',error })
+        res.status(500).json({ message: 'Something went wrong!', error })
     }
 }
 
@@ -21,5 +21,5 @@ const register = async (req, res) => {
 
 module.exports = {
     getUser,
-    register
+    register,
 }
