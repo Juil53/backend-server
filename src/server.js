@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const routes = require('./routes/web')
 const db = require('./config/connectDB')
 const app = express();
+const cors = require('cors');
 
 //Run env file
 require('dotenv').config();
@@ -12,6 +13,7 @@ require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
 
 routes.initWebRoutes(app);
 
