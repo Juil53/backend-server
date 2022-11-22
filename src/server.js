@@ -8,7 +8,7 @@ const app = express();
 require('dotenv').config();
 
 //Setup port
-const port = process.env.PORT || 8000;
+// const port = process.env.PORT || 8000;
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -17,6 +17,6 @@ routes.initWebRoutes(app);
 
 db.checkConnection()
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`Example app listening on port ${port}`)
 })
