@@ -20,7 +20,7 @@ const login = async (req, res) => {
         if (!userData.data) {
             res.status(500).json({ message: userData.message })
         } else {
-            res.status(200).json({ message: userData.message, userData, accessToken })
+            res.status(200).json({ userData, accessToken })
         }
     } catch (error) {
         console.log(error);

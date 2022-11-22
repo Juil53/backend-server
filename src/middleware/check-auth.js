@@ -6,8 +6,8 @@ const checkAuth = (req, res, next) => {
         jwt.verify(token, process.env.JWT_KEY)
         next()
     } catch (error) {
-        res.status(401).json({ message: "auth wrong!" })
-        // res.redirect("/login")
+        res.status(401).json({ message: "Please login first!!!" })
+        res.redirect("/")
     }
 }
 
