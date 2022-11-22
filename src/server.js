@@ -18,5 +18,5 @@ routes.initWebRoutes(app);
 db.checkConnection()
 
 app.listen(process.env.PORT || 8000, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port: ${process.env.PORT} `)
 })
